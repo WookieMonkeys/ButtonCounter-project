@@ -12,6 +12,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     private Button increment_button;
+    private Button decrement_button;
+    private Button clear_button;
+
     private TextView display;
 
     @Override
@@ -21,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         display = findViewById(R.id.displayId);
 
-        increment_button = findViewById(R.id.button);
+        increment_button = findViewById(R.id.incrementButton);
         increment_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,6 +32,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        decrement_button = findViewById(R.id.decrementButton);
+        decrement_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                decrementCounter();
+            }
+        });
+
+        clear_button = findViewById(R.id.clearButton);
+        clear_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clearCounter();
+            }
+        });
 
     }
 
@@ -36,6 +54,16 @@ public class MainActivity extends AppCompatActivity {
         int currentValue = Integer.valueOf(display.getText().toString());
         currentValue++;
         display.setText(String.valueOf(currentValue));
+    }
+
+    private void decrementCounter(){
+        int currentValue = Integer.valueOf(display.getText().toString());
+        currentValue--;
+        display.setText(String.valueOf(currentValue));
+    }
+
+    private void clearCounter(){
+        display.setText(String.valueOf(0));
     }
 
     @Override

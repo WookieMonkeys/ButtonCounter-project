@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Button-Counter-Walter</string>
-    <string name="Increment_Button">Increment</string>
-    <string name="Decrement_Button">Decrement</string>
+    <string name="Increment_Button">+</string>
+    <string name="Decrement_Button">-</string>
     <string name="Clear_Button">Clear</string>
+    <string name="Counter_Button">0</string>
 
 
 </resources>
